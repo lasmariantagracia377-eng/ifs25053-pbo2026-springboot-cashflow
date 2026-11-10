@@ -12,17 +12,16 @@
     </parent>
 
     <groupId>org.delcom</groupId>
-    <artifactId>abdullah_ubaid-pbo2026-springboot-cashflow</artifactId>
+    <artifactId>ifs25053-pbo2026-springboot-cashflow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>abdullah_ubaid-pbo2026-springboot-cashflow</name>
+    <name>ifs25053-pbo2026-springboot-cashflow</name>
     <description>Aplikasi Cashflow (Spring Boot + Vaadin, Clean Architecture)</description>
 
     <properties>
         <java.version>25</java.version>
         <vaadin.version>25.3.4</vaadin.version>
         <jacoco.version>0.8.14</jacoco.version>
-        <!-- Samakan dengan versi karibu-testing di pom.xml proyek Todo List / kerangka lab -->
-        <karibu.version>2.7.0</karibu.version>
+        <karibu.version>2.2.0</karibu.version>
     </properties>
 
     <dependencyManagement>
@@ -63,7 +62,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.mvysny.karibu-testing</groupId>
+            <groupId>com.github.mvysny.kaributesting</groupId>
             <artifactId>karibu-testing-v24</artifactId>
             <version>${karibu.version}</version>
             <scope>test</scope>
@@ -87,12 +86,16 @@
                 <version>${jacoco.version}</version>
                 <executions>
                     <execution>
-                        <goals><goal>prepare-agent</goal></goals>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
                     </execution>
                     <execution>
                         <id>report</id>
                         <phase>verify</phase>
-                        <goals><goal>report</goal></goals>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
